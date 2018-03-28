@@ -2,6 +2,8 @@ package com.travix.medusa.busyflights.rest.webservices;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,7 +21,7 @@ public class BusyFlightsController {
 
 	@PostMapping("/flights")
 	public List<BusyFlightsResponse> retrieveBusyFlightsResponses(
-			@RequestBody BusyFlightsRequest busyFlightsRequest) {
+			@Valid @RequestBody BusyFlightsRequest busyFlightsRequest) {
 		return busyFlightsService.findAndSortByFare(busyFlightsRequest);
 	}
 }
