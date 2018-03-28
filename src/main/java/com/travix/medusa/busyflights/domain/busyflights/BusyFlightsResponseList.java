@@ -29,4 +29,8 @@ public class BusyFlightsResponseList {
 		super();
 	}
 
+	public void add(BusyFlightsResponse busyFlightsResponse) {
+		this.responses.add(busyFlightsResponse);
+	}
+
 }
