@@ -5,17 +5,16 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.travix.medusa.busyflights.domain.toughjet.ToughJetRequest;
-import com.travix.medusa.busyflights.domain.toughjet.ToughJetResponse;
+import com.travix.medusa.busyflights.domain.toughjet.ToughJetResponseList;
 
 @Component
 public class ToughJetRestClient {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	public ToughJetResponse retrieveData(ToughJetRequest toughJetRequest) {
-		ToughJetResponse toughJetResponse = restTemplate.postForObject("http://localhost:8080/tough",
-				toughJetRequest,ToughJetResponse.class);
-		return toughJetResponse;
+	public ToughJetResponseList retrieveData(ToughJetRequest toughJetRequest) {
+		return restTemplate.postForObject("http://localhost:8080/tough",
+				toughJetRequest,ToughJetResponseList.class);
 	}
 
 }

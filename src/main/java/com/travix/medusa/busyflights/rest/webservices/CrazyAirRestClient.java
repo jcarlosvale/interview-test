@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.travix.medusa.busyflights.domain.crazyair.CrazyAirRequest;
-import com.travix.medusa.busyflights.domain.crazyair.CrazyAirResponse;
+import com.travix.medusa.busyflights.domain.crazyair.CrazyAirResponseList;
 
 @Component
 public class CrazyAirRestClient {
@@ -13,9 +13,8 @@ public class CrazyAirRestClient {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	public CrazyAirResponse retrieveData(CrazyAirRequest crazyAirRequest) {
-		CrazyAirResponse crazyAirResponse = restTemplate.postForObject("http://localhost:8080/crazy",
-				crazyAirRequest,CrazyAirResponse.class);
-		return crazyAirResponse;
+	public CrazyAirResponseList retrieveData(CrazyAirRequest crazyAirRequest) {
+		return restTemplate.postForObject("http://localhost:8080/crazy",
+				crazyAirRequest,CrazyAirResponseList.class);
 	}
 }
