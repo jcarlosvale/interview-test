@@ -7,6 +7,12 @@ import org.springframework.web.client.RestTemplate;
 import com.travix.medusa.busyflights.domain.toughjet.ToughJetRequest;
 import com.travix.medusa.busyflights.domain.toughjet.ToughJetResponseList;
 
+/**
+ * New Class
+ * ToughJet WS Rest Client
+ * @author joao
+ *
+ */
 @Component
 public class ToughJetRestClient {
 	@Autowired

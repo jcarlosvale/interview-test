@@ -3,6 +3,11 @@ package com.travix.medusa.busyflights.domain.busyflights;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a List of Buys Flights, merge responses of CrazyAir and ToughJet
+ * @author Joao Carlos
+ *
+ */
 public class BusyFlightsResponseList {
 
 	private List<BusyFlightsResponse> responses = new ArrayList<BusyFlightsResponse>();

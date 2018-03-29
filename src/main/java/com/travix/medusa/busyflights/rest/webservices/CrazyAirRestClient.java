@@ -7,6 +7,11 @@ import org.springframework.web.client.RestTemplate;
 import com.travix.medusa.busyflights.domain.crazyair.CrazyAirRequest;
 import com.travix.medusa.busyflights.domain.crazyair.CrazyAirResponseList;
 
+/**
+ * CrazyAir WS Rest Client
+ * @author joao
+ *
+ */
 @Component
 public class CrazyAirRestClient {
 

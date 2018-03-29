@@ -2,7 +2,12 @@ package com.travix.medusa.busyflights.exception;
 
 import java.util.Date;
 
-
+/**
+ * New Class
+ * An Exception Response Bean to represent exceptions 
+ * @author joao
+ *
+ */
 public class ExceptionResponse {
 	
 	private Date timestamp;

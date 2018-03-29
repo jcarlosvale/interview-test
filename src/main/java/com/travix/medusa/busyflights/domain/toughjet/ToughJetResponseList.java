@@ -3,6 +3,12 @@ package com.travix.medusa.busyflights.domain.toughjet;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * New Class
+ * Represents a List of Tough Jet Response 
+ * @author joao
+ *
+ */
 public class ToughJetResponseList {
 
 	private List<ToughJetResponse> responses = new ArrayList<ToughJetResponse>();
@@ -27,6 +33,10 @@ public class ToughJetResponseList {
 
 	public ToughJetResponseList() {
 		super();
+	}
+
+	public void addResponse(ToughJetResponse toughJetResponse) {
+		this.responses.add(toughJetResponse);
 	}
 	
 }
